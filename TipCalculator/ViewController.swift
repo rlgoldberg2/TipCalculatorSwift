@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
     @IBOutlet var resultsTextView : UITextView!
+    
+    @IBOutlet weak var tipTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
