@@ -39,10 +39,10 @@ class TipCalculatorModel {
         
     }
 }
-
+/*
 import UIKit
 
-class TestDataSource: NSObject, UITableViewDataSource {
+class TestDataSource: NSObject {
     let tipCalc = TipCalculatorModel (total: 33.25, taxPct: 0.06)
     var possibleTips = Dictionary<Int, (tipAmt:Double, tipTotal: Double)>()
     
@@ -55,7 +55,8 @@ class TestDataSource: NSObject, UITableViewDataSource {
         
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedKeys.count
     }
     
@@ -69,5 +70,6 @@ class TestDataSource: NSObject, UITableViewDataSource {
         cell.detailTextLabel?.text = String(format:"Tip:$%0.2f, Total: $%0.2f", tipAmt,total)
         return cell
     }
-    
+
 }
+*/
