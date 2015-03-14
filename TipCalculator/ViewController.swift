@@ -12,8 +12,7 @@ class UIViewController {
     
 }
     
-//class ViewController: UIKit.UIViewController, UITableViewDataSource {
-class ViewController: UIKit.UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIKit.UIViewController, UITableViewDataSource {
 
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
@@ -50,9 +49,9 @@ class ViewController: UIKit.UIViewController, UITableViewDataSource, UITableView
         refreshUI()
     }
     
-    @IBAction func viewTapped(sender: AnyObject) {
+   /* @IBAction func viewTapped(sender: AnyObject) {
         totalTextField.resignFirstResponder()
-    }
+    }*/
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedKeys.count
