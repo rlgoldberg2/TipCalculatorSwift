@@ -12,7 +12,7 @@ class UIViewController {
     
 }
     
-class ViewController: UIKit.UIViewController, UITableViewDataSource {
+class ViewController: UIKit.UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
@@ -64,7 +64,7 @@ class ViewController: UIKit.UIViewController, UITableViewDataSource {
         let total = possibleTips[tipPct]!.tipTotal
         
         cell.textLabel?.text = "\(tipPct)%:"
-        cell.detailTextLabel?.text = String(format:"Tip:$%0.2f, Total: $%0.2f", tipAmt,total)
+        cell.detailTextLabel?.text = String(format:"Tip: $%0.2f, Total: $%0.2f", tipAmt,total)
         return cell
     }
 

@@ -8,7 +8,7 @@
         <!--Tip Calculator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -37,7 +37,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-Qc-Kvb">
                                 <rect key="frame" x="190" y="116" width="396" height="31"/>
                                 <connections>
-                                    <action selector="taxPercentageChanged:" destination="kh9-bI-dsS" eventType="valueChanged" id="ju1-41-1Za"/>
+                                    <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mm3-VL-bHQ"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rse-xt-Psf">
@@ -46,7 +46,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateTapped:" destination="kh9-bI-dsS" eventType="touchUpInside" id="68E-tA-0wc"/>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v1d-tu-zD3"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="V6x-Ip-i5Y">
@@ -78,12 +78,14 @@
                             <constraint firstItem="rse-xt-Psf" firstAttribute="top" secondItem="dfe-Qc-Kvb" secondAttribute="bottom" constant="8" symbolic="YES" id="xZW-hg-51M"/>
                             <constraint firstItem="dfe-Qc-Kvb" firstAttribute="leading" secondItem="1Mp-b1-HkS" secondAttribute="trailing" constant="8" symbolic="YES" id="zmA-5x-Dtz"/>
                         </constraints>
-                        <connections>
-                            <outlet property="taxPctLabel" destination="1Mp-b1-HkS" id="ItK-0U-GiO"/>
-                            <outlet property="taxPctSlider" destination="dfe-Qc-Kvb" id="Zqu-Mi-SNG"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="Q2f-mk-pBV" userLabel="Tip Calculator"/>
+                    <connections>
+                        <outlet property="taxPctLabel" destination="1Mp-b1-HkS" id="QRB-ht-WVu"/>
+                        <outlet property="taxPctSlider" destination="dfe-Qc-Kvb" id="5Xr-Eu-ePW"/>
+                        <outlet property="tipTableView" destination="V6x-Ip-i5Y" id="ewC-L2-fMW"/>
+                        <outlet property="totalTextField" destination="TJf-ma-Xhf" id="Y7W-cZ-vSI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
